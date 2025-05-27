@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cyber Birthday Quest</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #e0e0ff;
+      font-family: 'Courier New', monospace;
+      margin: 0;
+      padding: 40px;
+    }
+    h1 {
+      color: #c77dff;
+      font-size: 2.5em;
+      animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: .15em solid #c77dff;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #c77dff; }
+    }
+    .station {
+      background: rgba(255,255,255,0.05);
+      padding: 1.5em;
+      margin: 2em 0;
+      border-left: 4px solid #c77dff;
+      border-radius: 8px;
+    }
+    a {
+      color: #c77dff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    audio {
+      margin-top: 0.8em;
+      width: 100%;
+    }
+    footer {
+      text-align: center;
+      color: #888;
+      font-size: 0.9em;
+      margin-top: 4em;
+    }
+    button {
+      padding: 0.7em 1.2em;
+      font-size: 1em;
+      background: #c77dff;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #a64dff;
+      color: #fff;
+    }
+    #secret {
+      margin-top: 1em;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cyber Birthday Quest</h1>
+
+  <div class="station">
+    <h2>Station 1: Initiation</h2>
+    <p><a href="qr/station_1_qr.png" target="_blank">Scan QR</a></p>
+    <audio controls src="audio/station1_with_background.mp3"></audio>
+  </div>
+
+  <div class="station">
+    <h2>Station 2: Phase Shift</h2>
+    <p><a href="qr/station_2_qr.png" target="_blank">Scan QR</a></p>
+    <audio controls src="audio/station2_with_background.mp3"></audio>
+  </div>
+
+  <div class="station">
+    <h2>Station 3: Glitch Core</h2>
+    <p><a href="qr/station_3_qr.png" target="_blank">Scan QR</a></p>
+    <audio controls src="audio/station3_with_background.mp3"></audio>
+  </div>
+
+  <div class="station">
+    <h2>Station 4: Memory Vault</h2>
+    <p><a href="https://photos.app.goo.gl/EZJtH51eKuW6Chub8" target="_blank">View Shared Memories</a></p>
+    <audio controls src="audio/station4_with_background.mp3"></audio>
+  </div>
+
+  <div class="station">
+    <h2>Station 5: Final Drop</h2>
+    <button onclick="revealFinal()">Activate Final Drop</button>
+    <div id="secret">
+      <p><strong>Shelsi, you found secret chest!</strong></p>
+      <p><a href="https://youtu.be/dQw4w9WgXcQ?si=RTE7XIRE3dA2oDoM" target="_blank">Unlock Surprise</a></p>
+      <img src="happy_cyber_birthday_card.png" alt="Cyber Birthday" style="max-width:100%; margin-top:1em;">
+      <audio controls src="audio/station5_with_background.mp3"></audio>
+    </div>
+  </div>
+
+  <footer>
+    Crafted by <strong style="color:#c77dff;">Nyx Protocol</strong>. Powered by <strong style="color:#c77dff;">dnull_systems</strong>.
+  </footer>
+
+  <script>
+    function revealFinal() {
+      document.getElementById("secret").style.display = "block";
+    }
+  </script>
+</body>
+</html>
